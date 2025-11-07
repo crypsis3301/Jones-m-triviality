@@ -107,7 +107,7 @@ Part I proves a *uniform barrier* for Jones–Vassiliev truncations and derives 
 
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone crypsis3301/Jones-m-triviality
 cd Jones-m-triviality
 
 # Create virtual environment
@@ -116,9 +116,6 @@ source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
-
-# Optional: install development tools
-pip install -r requirements-dev.txt  # if available
 ```
 
 ### Dependencies
