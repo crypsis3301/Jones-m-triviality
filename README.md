@@ -458,6 +458,10 @@ Computes Jm-triviality index for a sample knot.
     <img src="assets/deg_cap.png" width="800" alt="Degree cap for Jones-m-flat subcubes.">
 </div>
 
+<div align="center">
+  <img src="assets/m_barrier.png" width="800" alt="Uniform barrier.">
+</div>
+
 - **Detection corollaries.** If $V_K\equiv1$ then $K$ is the unknot (Thm. 5.3). If *all* finite‑type invariants vanish (GH $m$-trivial for all $m$), then $K$ is the unknot (Thm. 5.4).
   <div align="center">
     <img src="assets/Udetection.png" width="800" alt="Jones detects the unknot.">
