@@ -457,7 +457,7 @@ Computes Jm-triviality index for a sample knot.
     <img src="assets/Jm_triviality_JVP.png" width="800" alt="Jones-Vassiliev polynomial.">
   </div>
 
-- **Census up to 19 crossings.** Using Knot Atlas (≤10) and Dartmouth (11–19) datasets, we observe the barrier and an empirical refinement $m \le \lfloor N/2\rfloor + 1$ throughout. We also confirm a **min–law** under connected sum $m(K_0\#K_1)=\min\{m(K_0),m(K_1)\}$. *(Figures: Part II, pp. 14–15.)*
+- **Census up to 19 crossings.** Using Knot Atlas (≤10) and Dartmouth (11–19) datasets, we observe the barrier and an empirical refinement of the barrier throughout. *(Figures: Part II, pp. 14–15.)*
 
 <div align="center">
     <img src="assets/m_barrier_comp.png" width="800" alt="Tighter empirical barrier.">
