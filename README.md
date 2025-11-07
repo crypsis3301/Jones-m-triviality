@@ -9,6 +9,11 @@ Part I proves a *uniform barrier* for Jones–Vassiliev truncations and derives 
 - 📄 **Part II (PDF):** [`papers/bound_on_m_triviality-comp.pdf`](papers/bound_on_m_triviality-comp.pdf)
 
 ---
+ <div align="center">
+    <img src="assets/Jm_triviality.png" width="800" alt="Definition of Jm-triviality from Part I.">
+    <img src="assets/m_barrier.png" width="800" alt="Uniform barrier.">
+</div>
+
 
 ## TL;DR
 
@@ -16,23 +21,10 @@ Part I proves a *uniform barrier* for Jones–Vassiliev truncations and derives 
   $$m \le N(K)\quad\text{(crossing number).}$$
   As a corollary, **the Jones polynomial detects the unknot**: if $V_K(t)\equiv 1$, then $K$ is the unknot. On any minimal diagram with $C$ crossings, vanishing $c_1,\dots,c_C$ is a finite certificate of triviality.
 
-  <div align="center">
-    <img src="assets/Jm_triviality.png" width="800" alt="Definition of Jm-triviality from Part I.">
-  </div>
-
-  <div align="center">
-    <img src="assets/m_barrier.png" width="800" alt="Uniform barrier.">
-    <img src="assets/Udetection.png" width="800" alt="Jones detects the unknot.">
-  </div>
 
 - **Computational evidence (Part II).** Using the **Jones–Vassiliev polynomial (JVP)** in $\mathbb{Z}[p][x]/(x^2-px-1)$, we classify $J_m$-trivial knots by the $p$-adic order of $V_K-1$ and verify the barrier across **352,152,252** prime knots with $N\le 19$. Data obey a stricter empirical cap
   $$m \le \Big\lfloor \tfrac{N(K)}{2}\Big\rfloor + 1,$$
   and reproduce the symbol‑skein recursion and the **last‑row fingerprint**. See Fig. 3 (first occurrences, Part II p. 14) and Fig. 4 (likelihood curves, Part II p. 15).
-
-  <div align="center">
-    <img src="assets/Jm_triviality_JVP.png" width="800" alt="Jones-Vassiliev polynomial.">
-    <img src="assets/m_barrier_comp.png" width="800" alt="Tighter empirical barrier.">
-  </div>
 
 ---
 
@@ -130,7 +122,7 @@ Here's a typical workflow to analyze knots with 13-15 crossings:
 ./OptimizedJonesScraper1.py --source dartmouth --crossing 13-15 --out j13_15.json
 
 # Step 2: Compute Jm-triviality indices
-./Jm_triviality.py j13_15.json 10
+./Jm_triviality.py j13_15.json 2
 
 # Step 3: Visualize the results
 ./visualize.py knot_ids.json
@@ -431,6 +423,9 @@ Computes Jm-triviality index for a sample knot.
 - **Shadow criterion (Lemma B.1).** If (P) holds on all crossings of a shadow, every crossing is nugatory and the shadow is a tree; hence every carried diagram is an unknot. This collapses any supercritical Jones–$m$–flat face and yields the barrier when $m$ exceeds the number of varied crossings. *(Proof: Part I, Appendix B, pp. 24–26.)*
 
 - **Detection corollaries.** If $V_K\equiv1$ then $K$ is the unknot (Thm. 5.3). If *all* finite‑type invariants vanish (GH $m$-trivial for all $m$), then $K$ is the unknot (Thm. 5.4).
+  <div align="center">
+    <img src="assets/Udetection.png" width="800" alt="Jones detects the unknot.">
+  </div>
 
 ### Part II — Computation (finite packaging & large‑scale evidence)
 
@@ -438,7 +433,15 @@ Computes Jm-triviality index for a sample knot.
   $$V_K(x)=\sum_{q\ge0}\big(a_q(K)+b_q(K)\,x\big)p^q,\qquad c_q:=a_q+b_q,$$
   where each $a_q,b_q$ has Vassiliev order $\le q$. Extract $(a_q,b_q)$ from $V_K(t)$ via $t^{1/2}=x,\ t^{-1/2}=x-p$, plus the reduction $x^2=px+1$. The **$p$-adic order of $V_K-1$** equals the $J_m$–triviality index $m(K)$ ("bandwidth").
 
+  <div align="center">
+    <img src="assets/Jm_triviality_JVP.png" width="800" alt="Jones-Vassiliev polynomial.">
+  </div>
+
 - **Census up to 19 crossings.** Using Knot Atlas (≤10) and Dartmouth (11–19) datasets, we observe the barrier and an empirical refinement $m \le \lfloor N/2\rfloor + 1$ throughout. We also confirm a **min–law** under connected sum $m(K_0\#K_1)=\min\{m(K_0),m(K_1)\}$. *(Figures: Part II, pp. 14–15.)*
+
+<div align="center">
+    <img src="assets/m_barrier_comp.png" width="800" alt="Tighter empirical barrier.">
+  </div>
 
 ---
 
