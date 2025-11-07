@@ -1,0 +1,10 @@
+__pycache__/
+JonesData/jones_13_to_15.json
+JonesData/jones_16.json
+JonesData/jones_17.json
+JonesData/jones_18.json
+JonesData/jones_19.json
+JonesData/jones_19_1.json
+JonesData/jones_19_2.json
+venv/
+.git/

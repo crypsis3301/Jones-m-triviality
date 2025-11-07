@@ -1,0 +1,238 @@
+
+$ ./OptimizedJonesScraper1.py --source dartmouth --crossing 13-15 --out j13_15.json
+
+[download] 13a_hyp_jones.tar.xz (13a hyp)
+  [0.1/0.1 MB] ✓
+[parsing ] 13a_hyp_jones.tar.xz
+  [Opening tar archive and streaming members...]
+  [File #1: 13a_hyp_jones... | +4,877 knots | Total: 4,877]
+[done    ] 13a_hyp_jones.tar.xz: 4,877 knots total
+
+
+[download] 13a_torus_jones.tar.xz (13a torus)
+  [0.0/0.0 MB] ✓
+[parsing ] 13a_torus_jones.tar.xz
+  [Opening tar archive and streaming members...]
+  [File #1: 13a_torus_jones... | +1 knots | Total: 1]
+[done    ] 13a_torus_jones.tar.xz: 1 knots total
+
+
+[download] 13n_hyp_jones.tar.xz (13n hyp)
+  [0.1/0.1 MB] ✓
+[parsing ] 13n_hyp_jones.tar.xz
+  [Opening tar archive and streaming members...]
+  [File #1: 13n_hyp_jones... | +5,108 knots | Total: 5,108]
+[done    ] 13n_hyp_jones.tar.xz: 5,108 knots total
+
+
+[download] 13n_satellite_jones.tar.xz (13n satellite)
+  [0.0/0.0 MB] ✓
+[parsing ] 13n_satellite_jones.tar.xz
+  [Opening tar archive and streaming members...]
+  [File #1: 13n_satellite_jones... | +2 knots | Total: 2]
+[done    ] 13n_satellite_jones.tar.xz: 2 knots total
+
+
+[download] 14a_hyp_jones.tar.xz (14a hyp)
+  [0.3/0.3 MB] ✓
+[parsing ] 14a_hyp_jones.tar.xz
+  [Opening tar archive and streaming members...]
+  [File #1: 14a_hyp_jones... | +19,536 knots | Total: 19,536]
+[done    ] 14a_hyp_jones.tar.xz: 19,536 knots total
+
+
+[download] 14n_hyp_jones.tar.xz (14n hyp)
+  [0.4/0.4 MB] ✓
+[parsing ] 14n_hyp_jones.tar.xz
+  [Opening tar archive and streaming members...]
+  [File #1: 14n_hyp_jones... | +27,433 knots | Total: 27,433]
+[done    ] 14n_hyp_jones.tar.xz: 27,433 knots total
+
+
+[download] 14n_satellite_jones.tar.xz (14n satellite)
+  [0.0/0.0 MB] ✓
+[parsing ] 14n_satellite_jones.tar.xz
+  [Opening tar archive and streaming members...]
+  [File #1: 14n_satellite_jones... | +2 knots | Total: 2]
+[done    ] 14n_satellite_jones.tar.xz: 2 knots total
+
+
+[download] 14n_torus_jones.tar.xz (14n torus)
+  [0.0/0.0 MB] ✓
+[parsing ] 14n_torus_jones.tar.xz
+  [Opening tar archive and streaming members...]
+  [File #1: 14n_torus_jones... | +1 knots | Total: 1]
+[done    ] 14n_torus_jones.tar.xz: 1 knots total
+
+
+[download] 15a_hyp_jones.tar.xz (15a hyp)
+  [1.2/1.2 MB] ✓
+[parsing ] 15a_hyp_jones.tar.xz
+  [Opening tar archive and streaming members...]
+  [File #1: 15a_hyp_jones... | +85,262 knots | Total: 85,262]
+[done    ] 15a_hyp_jones.tar.xz: 85,262 knots total
+
+
+[download] 15a_torus_jones.tar.xz (15a torus)
+  [0.0/0.0 MB] ✓
+[parsing ] 15a_torus_jones.tar.xz
+  [Opening tar archive and streaming members...]
+  [File #1: 15a_torus_jones... | +1 knots | Total: 1]
+[done    ] 15a_torus_jones.tar.xz: 1 knots total
+
+
+[download] 15n_hyp_jones.tar.xz (15n hyp)
+  [2.4/2.4 MB] ✓
+[parsing ] 15n_hyp_jones.tar.xz
+  [Opening tar archive and streaming members...]
+  [File #1: 15n_hyp_jones... | +168,023 knots | Total: 168,023]
+[done    ] 15n_hyp_jones.tar.xz: 168,023 knots total
+
+
+[download] 15n_satellite_jones.tar.xz (15n satellite)
+  [0.0/0.0 MB] ✓
+[parsing ] 15n_satellite_jones.tar.xz
+  [Opening tar archive and streaming members...]
+  [File #1: 15n_satellite_jones... | +6 knots | Total: 6]
+[done    ] 15n_satellite_jones.tar.xz: 6 knots total
+
+
+[download] 15n_torus_jones.tar.xz (15n torus)
+  [0.0/0.0 MB] ✓
+[parsing ] 15n_torus_jones.tar.xz
+  [Opening tar archive and streaming members...]
+  [File #1: 15n_torus_jones... | +1 knots | Total: 1]
+[done    ] 15n_torus_jones.tar.xz: 1 knots total
+
+[complete] Wrote j13_15.json with 310,253 knots
+
+
+
+$ ./Jm_triviality.py j13_15.json 10
+
+
+Using 10 workers.
+
+>> Using JVP representation <<
+
+Split files not found. Starting ultra-fast split...
+
+File size: 0.05 GB
+Splitting into 10 chunks...
+
+Data section: bytes 462 to 55680984
+Split 1: byte 5568564 (0.01 GB)
+Split 2: byte 11136709 (0.01 GB)
+Split 3: byte 16704687 (0.02 GB)
+Split 4: byte 22272838 (0.02 GB)
+Split 5: byte 27840776 (0.03 GB)
+Split 6: byte 33408772 (0.03 GB)
+Split 7: byte 38976874 (0.04 GB)
+Split 8: byte 44544940 (0.04 GB)
+Split 9: byte 50113036 (0.05 GB)
+
+Creating 10 split files...
+
+Writing split 0: 5.3 MB ✓
+Writing split 1: 5.3 MB ✓
+Writing split 2: 5.3 MB ✓
+Writing split 3: 5.3 MB ✓
+Writing split 4: 5.3 MB ✓
+Writing split 5: 5.3 MB WARNING: chunk doesn't end with brace, ends with: b' 10, "4": -5, "6": 1}},\n  "15n_hyp_jones:40047": {'
+ ✓
+Writing split 6: 5.3 MB ✓
+Writing split 7: 5.3 MB ✓
+Writing split 8: 5.3 MB ✓
+Writing split 9: 5.3 MB ✓
+
+✓ Split complete! 10 files in knot_splits/
+Processing with 10 workers...
+
+Worker 0: Starting knots_split_000.json
+Worker 1: Starting knots_split_001.json
+Worker 2: Starting knots_split_002.json
+Worker 3: Starting knots_split_003.json
+Worker 4: Starting knots_split_004.json
+Worker 5: Starting knots_split_005.json
+Worker 6: Starting knots_split_006.json
+Worker 7: Starting knots_split_007.json
+Worker 8: Starting knots_split_008.json
+Worker 9: Starting knots_split_009.json
+
+Worker 4: Knot 15a_hyp_jones:62480: J3-trivial
+Worker 7: Knot 15n_hyp_jones:72951: J3-trivial
+Worker 1: Knot 14n_hyp_jones:1854: J3-trivial
+Worker 4: Knot 15a_hyp_jones:62485: J4-trivial
+Worker 7: Knot 15n_hyp_jones:72958: J4-trivial
+Worker 5: Knot 15n_hyp_jones:5909: J3-trivial
+Worker 3: Knot 15a_hyp_jones:35111: J3-trivial
+Worker 5: Knot 15n_hyp_jones:5927: J4-trivial
+Worker 9: Knot 15n_hyp_jones:136872: J4-trivial
+Worker 8: Knot 15n_hyp_jones:105226: J3-trivial
+Worker 2: Knot 15a_hyp_jones:7306: J3-trivial
+Worker 8: Knot 15n_hyp_jones:105279: J4-trivial
+Worker 1: Knot 14n_hyp_jones:1943: J4-trivial
+Worker 0: Knot 13a_hyp_jones:71: J3-trivial
+Worker 4: Knot 15a_hyp_jones:62637: J5-trivial
+Worker 5: Knot 15n_hyp_jones:6110: J5-trivial
+Worker 8: Knot 15n_hyp_jones:105397: J5-trivial
+Worker 3: Knot 15a_hyp_jones:35275: J4-trivial
+Worker 9: Knot 15n_hyp_jones:137110: J5-trivial
+Worker 2: Knot 15a_hyp_jones:7490: J4-trivial
+Worker 2: Knot 15a_hyp_jones:7503: J5-trivial
+Worker 3: Knot 15a_hyp_jones:35322: J5-trivial
+Worker 6: Done - 1 knots processed
+Worker 7: Knot 15n_hyp_jones:73317: J5-trivial
+Worker 1: Knot 14n_hyp_jones:2274: J5-trivial
+Worker 0: Knot 13a_hyp_jones:754: J4-trivial
+Worker 0: Knot 13a_hyp_jones:757: J5-trivial
+Worker 9: Knot 15n_hyp_jones:137749: J6-trivial
+Worker 8: Knot 15n_hyp_jones:106354: J6-trivial
+Worker 4: Knot 15a_hyp_jones:64452: J7-trivial
+Worker 7: Knot 15n_hyp_jones:75540: J6-trivial
+Worker 1: Knot 14n_hyp_jones:8589: J6-trivial
+Worker 9: Knot 15n_hyp_jones:145515: J7-trivial
+Worker 0: Knot 13n_hyp_jones:4278: J6-trivial
+Worker 0: Knot 14a_hyp_jones:5: J3-trivial
+Worker 5: 10000 knots
+Worker 0: Knot 14a_hyp_jones:167: J4-trivial
+Worker 2: 10000 knots
+Worker 0: Knot 14a_hyp_jones:5988: J6-trivial
+Worker 3: Knot 15a_hyp_jones:49378: J7-trivial
+Worker 5: Knot 15n_hyp_jones:25837: J6-trivial
+Worker 2: 20000 knots
+Worker 1: Knot 15a_hyp_jones:70: J3-trivial
+Worker 1: Knot 15a_hyp_jones:658: J4-trivial
+Worker 1: Knot 15a_hyp_jones:2437: J5-trivial
+Worker 9: 30000 knots
+Worker 9: Done - 31179 knots processed
+Worker 0: Knot 14a_hyp_jones:19509: J8-trivial
+Worker 8: Done - 31656 knots processed
+Worker 1: 30000 knots
+Worker 4: Done - 28683 knots processed
+Worker 0: Done - 31372 knots processed
+Worker 5: Done - 34148 knots processed
+Worker 3: Done - 27375 knots processed
+Worker 7: 30000 knots
+Worker 2: Done - 27825 knots processed
+Worker 1: Done - 32867 knots processed
+Worker 7: Done - 32245 knots processed
+
+Merging results...
+
+============================================================
+RESULTS
+============================================================
+
+13 crossings. Maximally trivial m=6; Knot 13n_hyp_jones:4278
+9988 knots. Jm-trivial probabilities: J2: 0.88 | J3: 0.099 | J4: 0.016 | J5: 0.0062 | J6: 0.0001
+
+14 crossings. Maximally trivial m=8; Knot 14a_hyp_jones:19509
+46972 knots. Jm-trivial probabilities: J2: 0.88 | J3: 0.094 | J4: 0.024 | J5: 0.0032 | J6: 0.00083 | J7: 0.0 | J8: 2.1e-05
+
+15 crossings. Maximally trivial m=7; Knot 15a_hyp_jones:49378
+220389 knots. Jm-trivial probabilities: J2: 0.89 | J3: 0.092 | J4: 0.017 | J5: 0.0039 | J6: 0.00033 | J7: 0.00013
+
+Jm-triviality distribution saved to Jm_probs.json
+Knot chunks written to knot_ids.json. To visualize use ./visualize knot_ids.json.
+Elapsed time 0:21
