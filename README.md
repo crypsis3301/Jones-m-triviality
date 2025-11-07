@@ -290,16 +290,16 @@ RESULTS
 
 **Screenshots (0-12 crossings)**
  <div align="center">
-    <img src="assets/0_12_g.jpeg" width="400" alt="">
-    <img src="assets/0_12_p.jpeg" width="400" alt="">
+    <img src="assets/0_12_g.jpeg" width="800" alt="">
+    <img src="assets/0_12_p.jpeg" width="800" alt="">
 </div>
 
 **Screenshots (0-18 crossings)**
 <div align="center">
-    <img src="assets/0_18_g.jpeg" width="200" alt="">
-    <img src="assets/0_18_g1.jpeg" width="200" alt="">
-    <img src="assets/0_18_p.jpeg" width="200" alt="">
-    <img src="assets/0_18_p1.jpeg" width="200" alt="">
+    <img src="assets/0_18_g.jpeg" width="400" alt="">
+    <img src="assets/0_18_g1.jpeg" width="400" alt="">
+    <img src="assets/0_18_p.jpeg" width="400" alt="">
+    <img src="assets/0_18_p1.jpeg" width="400" alt="">
 </div>
 
 
