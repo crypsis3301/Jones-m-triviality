@@ -288,6 +288,21 @@ RESULTS
 
 ### 3. visualize.py
 
+**Screenshots (0-12 crossings)**
+ <div align="center">
+    <img src="assets/0_12_g.jpeg" width="400" alt="">
+    <img src="assets/0_12_p.jpeg" width="400" alt="">
+</div>
+
+**Screenshots (0-18 crossings)**
+<div align="center">
+    <img src="assets/0_18_g.jpeg" width="200" alt="">
+    <img src="assets/0_18_g1.jpeg" width="200" alt="">
+    <img src="assets/0_18_p.jpeg" width="200" alt="">
+    <img src="assets/0_18_p1.jpeg" width="200" alt="">
+</div>
+
+
 Creates an interactive HTML visualization showing knot distribution by crossing number and Jm-triviality class.
 
 **Usage:**
@@ -359,20 +374,6 @@ Produces a logarithmic plot showing:
 - **Y-axis**: Cumulative probability $P_m(N)$ (log scale)
 - **Curves**: One for each Jm-class (J3-J10)
 - **Labels**: Inline labels at curve endpoints
-
-With `--stats`:
-```
-======================================================================
-Cumulative Probability Statistics P_m(N)
-======================================================================
-m     P_m(8)       P_m(12)      P_m(17)      Growth      
-----------------------------------------------------------------------
-3     0.113845     0.093841     0.091523     0.80x
-4     0.020952     0.018721     0.016826     0.80x
-5     0.004762     0.003512     0.003735     0.78x
-...
-======================================================================
-```
 
 ---
 
@@ -505,7 +506,7 @@ See [`Jm_trivial_knots_up_to_19.md`](Jm_trivial_knots_up_to_19.md) for the compl
 - **8 crossings**: First J3-trivial (8₂), first J4-trivial (8₁₄)
 - **14 crossings**: First J8-trivial (14a_hyp_jones:19509)
 - **17 crossings**: First J9-trivial (17a_hyp_jones:1743282)
-- **19 crossings**: Multiple J9-trivial knots observed
+- **19 crossings**: Multiple J9-trivial knots observed (e.g., 19n_hyp_jones:199269550)
 
 **Empirical pattern:** $m \le \lfloor N/2 \rfloor + 1$ holds for all 352+ million knots tested.
 
@@ -553,8 +554,8 @@ On a typical workstation (16-core CPU, 32 GB RAM):
 **Issue**: `Jm_triviality.py` crashes with memory error  
 **Solution**: Reduce number of workers or process smaller crossing ranges
 
-**Issue**: JSON parsing errors in split files  
-**Solution**: Re-run with fresh download; file may be corrupted
+**Issue**: JSON parsing errors in split files  ('Jm_triviality.py')
+**Solution**: Re-run with a different number of workers; one or more JSON files may be corrupted. 
 
 **Issue**: Visualization doesn't show all knots  
 **Solution**: Increase max_chunks in `visualize.py` (default 20,000)
@@ -575,15 +576,9 @@ If you use the theory or the code, please cite both parts:
 
 Contributions are welcome! Areas for improvement:
 
-- Extension to 20+ crossings to find the first $J_{\geq 10}$-trivial knots.
+- Extensions to knots with 20+ crossings; finding the first $J_{\geq 10}$-trivial knots.
 
 Please open an issue or submit a pull request.
-
----
-
-## License
-
-[Add your license here]
 
 ---
 
@@ -594,9 +589,3 @@ We thank the maintainers of:
 - **Dartmouth Knot Database** (https://knots.dartmouth.edu/jones_polynomial/)
 
 for providing comprehensive Jones polynomial datasets that made this computational study possible.
-
----
-
-## Contact
-
-[Add contact information here]
