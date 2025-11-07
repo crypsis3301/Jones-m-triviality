@@ -12,7 +12,7 @@ Part I proves a *uniform barrier* for Jones–Vassiliev truncations and derives 
 
 ## TL;DR
 
-- **Uniform barrier (Part I).** If a nontrivial knot $K$ is **Jones–$m$–trivial** (its Birman–Lin coefficients $c_1,\dots,c_{m-1}$ vanish), then
+- **Uniform barrier (Part I).** If a nontrivial knot $K$ is **Jones–m–trivial** (its Birman–Lin coefficients $c_1,\dots,c_{m-1}$ vanish), then
   $$m \le N(K)\quad\text{(crossing number).}$$
   As a corollary, **the Jones polynomial detects the unknot**: if $V_K(t)\equiv 1$, then $K$ is the unknot. On any minimal diagram with $C$ crossings, vanishing $c_1,\dots,c_C$ is a finite certificate of triviality.
 
@@ -26,18 +26,22 @@ Part I proves a *uniform barrier* for Jones–Vassiliev truncations and derives 
 
 ```
 .
-├── papers/                              # Theoretical papers (PDFs)
+├── papers/                             # Theoretical papers (PDFs)
 │   ├── bound_on_m_triviality-detection.pdf
 │   └── bound_on_m_triviality-comp.pdf
+|
+├── JonesData/                          # Jones polynomial related data
+│   ├── jones_0_to_12.json              # Jones coefficients up to 12 crossings scraped from Knot Atlas
+│   └── Jm_index_knot_ids/              # Knots and their Jm-triviality values used for visualization 
 │
 ├── OptimizedJonesScraper1.py           # Download Jones polynomial data
 ├── JVP.py                              # Jones-Vassiliev polynomial converter
 ├── BLexpansion.py                      # Birman-Lin expansion calculator
 ├── Jm_triviality.py                    # Main processor (Jm-triviality index)
-├── visualize.py                        # Interactive HTML visualizer
-├── plot_Jm_cdf.py                      # Cumulative probability plotter
+├── visualize.py                        # Generates interactive HTML visualizer
+├── plot_Jm_cdf.py                      # Jm-triviality cumulative probability plotter
 │
-├── Jm_trivial_knots_up_to_19.md       # Results: maximally Jm-trivial knots
+├── Jm_trivial_knots_up_to_19.md        # Results: first few occurrences of Jm-trivial knots
 ├── output_example.txt                  # Example workflow output
 │
 ├── requirements.txt                    # Python dependencies
@@ -59,7 +63,7 @@ Part I proves a *uniform barrier* for Jones–Vassiliev truncations and derives 
 
 | File | Description |
 |------|-------------|
-| **Jm_probs.json** | Conditional probabilities \(P(m \mid N)\) for each crossing number |
+| **Jm_probs.json** | Conditional probabilities \(P(m \mid N)\) for each crossing number  (output of `Jm_triviality.py`)|
 | **knot_ids.json** | Knot chunks organized by Jm-triviality index (output of `Jm_triviality.py`) |
 | **jones_*.json** | Downloaded Jones polynomial coefficient datasets (from scraper) |
 
@@ -78,7 +82,7 @@ Part I proves a *uniform barrier* for Jones–Vassiliev truncations and derives 
 ```bash
 # Clone the repository
 git clone <repository-url>
-cd knot-triviality
+cd Jones-m-triviality
 
 # Create virtual environment
 python -m venv .venv
