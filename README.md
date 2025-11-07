@@ -5,8 +5,8 @@
 **This repository bundles the two companion papers and the full code used for the large‑scale experiments.**  
 Part I proves a *uniform barrier* for Jones–Vassiliev truncations and derives unknot‑detection corollaries. Part II implements a finite packaging of the Birman–Lin layers, runs a census up to 19 crossings, and reports empirical patterns that sharpen the barrier.
 
-- 📄 **Part I (PDF):** [`papers/bound_on_m_triviality-detection.pdf`](papers/bound_on_m_triviality-detection.pdf)  
-- 📄 **Part II (PDF):** [`papers/bound_on_m_triviality-comp.pdf`](papers/bound_on_m_triviality-comp.pdf)
+- 📄 **Part I (PDF):** [`papers/bound_on_m_triviality-part_I.pdf`](papers/bound_on_m_triviality-part_I.pdf)  
+- 📄 **Part II (PDF):** [`papers/bound_on_m_triviality-part_II.pdf`](papers/bound_on_m_triviality-part_II.pdf)
 
 ---
 
@@ -302,6 +302,7 @@ RESULTS
     <img src="assets/0_18_p1.jpeg" width="400" alt="">
 </div>
 
+---
 
 Creates an interactive HTML visualization showing knot distribution by crossing number and Jm-triviality class.
 
@@ -339,7 +340,11 @@ Options:
 
 ### 4. plot_Jm_cdf.py
 
-Generates publication-quality plots of cumulative probabilities $P_m(N)$.
+Generates publication-quality plots of cumulative probabilities $P_m(N)$ (Figure 4 in Part II).
+
+<div align="center">
+    <img src="assets/jm_cumulative_probs.png" width="800" alt="">
+</div>
 
 **Usage:**
 ```bash
