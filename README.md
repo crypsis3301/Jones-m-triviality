@@ -101,7 +101,7 @@ Part I proves a *uniform barrier* for Jones–Vassiliev truncations and derives 
 
 - Python ≥ 3.10
 - 4+ GB RAM for processing large datasets
-- ~10 GB disk space for full 19-crossing dataset
+- ~87 GB disk space for the entire dataset up to 19 crossings.
 
 ### Setup
 
@@ -571,9 +571,9 @@ On a typical workstation (16-core CPU, 32 GB RAM):
 
 If you use the theory or the code, please cite both parts:
 
-> A. Carmi and E. Cohen, **A bound on the *m*-triviality of knots — Part I: Jones–Vassiliev unknot detection** (see `papers/bound_on_m_triviality-detection.pdf`).  
+> A. Carmi and E. Cohen, **A bound on the *m*-triviality of knots — Part I: Jones–Vassiliev unknot detection** (see `papers/bound_on_m_triviality-part_I.pdf`).  
 
-> A. Carmi and E. Cohen, **A bound on the *m*-triviality of knots — Part II: Computational evidence** (see `papers/bound_on_m_triviality-comp.pdf`).
+> A. Carmi and E. Cohen, **A bound on the *m*-triviality of knots — Part II: Computational evidence** (see `papers/bound_on_m_triviality-part_II.pdf`).
 
 ---
 
