@@ -10,29 +10,29 @@ Part I proves a *uniform barrier* for Jones–Vassiliev truncations and derives 
 
 ---
 
-### $J_m$-triviality
+## $J_m$-triviality
 
  <div align="center">
     <img src="assets/Jm_triviality.png" width="800" alt="Definition of Jm-triviality from Part I.">
 </div>
 
----
 
-### $m$-trivial / $J_m$-trivial knots
+
+## $m$-trivial / $J_m$-trivial knots
 
  <div align="center">
     <img src="assets/Jm_triviality_knots.png" width="800" alt="Jm-trivial knots.">
 </div>
 
----
 
-### Uniform barrier
+
+## Uniform barrier
 
 <div align="center">
   <img src="assets/m_barrier.png" width="800" alt="Uniform barrier.">
 </div>
 
----
+
 
 
 ## TL;DR
