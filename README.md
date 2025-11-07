@@ -469,9 +469,10 @@ Computes Jm-triviality index for a sample knot.
 </div>
 
 - **Detection corollaries.** If $V_K\equiv1$ then $K$ is the unknot (Thm. 5.3). If *all* finite‑type invariants vanish (GH $m$-trivial for all $m$), then $K$ is the unknot (Thm. 5.4).
-  <div align="center">
-    <img src="assets/Udetection.png" width="800" alt="Jones detects the unknot.">
-  </div>
+
+<div align="center">
+  <img src="assets/Udetection.png" width="800" alt="Jones detects the unknot.">
+</div>
 
 ### Part II — Computation (finite packaging & large‑scale evidence)
 
@@ -479,15 +480,15 @@ Computes Jm-triviality index for a sample knot.
   $$V_K(x)=\sum_{q\ge0}\big(a_q(K)+b_q(K)\,x\big)p^q,\qquad c_q:=a_q+b_q,$$
   where each $a_q,b_q$ has Vassiliev order $\le q$. Extract $(a_q,b_q)$ from $V_K(t)$ via $t^{1/2}=x,\ t^{-1/2}=x-p$, plus the reduction $x^2=px+1$. The **$p$-adic order of $V_K-1$** equals the $J_m$–triviality index $m(K)$ ("bandwidth").
 
-  <div align="center">
-    <img src="assets/Jm_triviality_JVP.png" width="800" alt="Jones-Vassiliev polynomial.">
-  </div>
+<div align="center">
+  <img src="assets/Jm_triviality_JVP.png" width="800" alt="Jones-Vassiliev polynomial.">
+</div>
 
 - **Census up to 19 crossings.** Using Knot Atlas (≤10) and Dartmouth (11–19) datasets, we observe the barrier and an empirical refinement of the barrier throughout. *(Figures: Part II, pp. 14–15.)*
 
 <div align="center">
-    <img src="assets/m_barrier_comp.png" width="800" alt="Tighter empirical barrier.">
-  </div>
+  <img src="assets/m_barrier_comp.png" width="800" alt="Tighter empirical barrier.">
+</div>
 
 ---
 
