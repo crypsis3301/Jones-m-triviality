@@ -53,7 +53,7 @@ Part I proves a *uniform barrier* for Jones–Vassiliev truncations and derives 
 | Script | Purpose |
 |--------|---------|
 | **OptimizedJonesScraper1.py** | Downloads Jones polynomial coefficient data from online repositories (Knot Atlas, Dartmouth) |
-| **JVP.py** | Converts Jones polynomials to Jones–Vassiliev polynomial (JVP) form in \(\mathbb{Z}[p][x]/(x^2-px-1)\) |
+| **JVP.py** | Converts Jones polynomials to Jones–Vassiliev polynomial (JVP) form in $\mathbb{Z}[p][x]/(x^2-px-1)$ |
 | **BLexpansion.py** | Computes Birman–Lin (Taylor) expansion coefficients from Jones polynomials |
 | **Jm_triviality.py** | Main processing pipeline: splits large JSON files, computes Jm-triviality indices in parallel, generates statistics |
 | **visualize.py** | Creates interactive HTML visualization of knot chunks by crossing number and triviality class |
