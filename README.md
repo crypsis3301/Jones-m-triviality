@@ -29,6 +29,11 @@ Part I proves a *uniform barrier* for Jones–Vassiliev truncations and derives 
   $$m \le \Big\lfloor \tfrac{N(K)}{2}\Big\rfloor + 1,$$
   and reproduce the symbol‑skein recursion and the **last‑row fingerprint**. See Fig. 3 (first occurrences, Part II p. 14) and Fig. 4 (likelihood curves, Part II p. 15).
 
+  <div align="center">
+    <img src="assets/Jm_triviality_JVP.png" width="800" alt="Jones-Vassiliev polynomial.">
+    <img src="assets/m_barrier_comp.png" width="800" alt="Tighter empirical barrier.">
+  </div>
+
 ---
 
 ## Repository Layout
