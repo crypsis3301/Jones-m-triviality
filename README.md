@@ -559,7 +559,7 @@ On a typical workstation (16-core CPU, 32 GB RAM):
 **Issue**: `Jm_triviality.py` crashes with memory error  
 **Solution**: Reduce number of workers or process smaller crossing ranges
 
-**Issue**: JSON parsing errors in split files  ('Jm_triviality.py')   
+**Issue**: JSON parsing errors in split files  (`Jm_triviality.py`)   
 **Solution**: Re-run with a different number of workers; one or more JSON files may be corrupted. 
 
 **Issue**: Visualization doesn't show all knots  
