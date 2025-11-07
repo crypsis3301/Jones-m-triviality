@@ -9,9 +9,23 @@ Part I proves a *uniform barrier* for Jones–Vassiliev truncations and derives 
 - 📄 **Part II (PDF):** [`papers/bound_on_m_triviality-comp.pdf`](papers/bound_on_m_triviality-comp.pdf)
 
 ---
+
+### $J_m$-triviality
+
  <div align="center">
     <img src="assets/Jm_triviality.png" width="800" alt="Definition of Jm-triviality from Part I.">
-    <img src="assets/m_barrier.png" width="800" alt="Uniform barrier.">
+</div>
+
+### $m$-trivial / $J_m$-trivial knots
+
+ <div align="center">
+    <img src="assets/Jm_triviality_knots.png" width="800" alt="Jm-trivial knots.">
+</div>
+
+### Uniform barrier
+
+<div align="center">
+  <img src="assets/m_barrier.png" width="800" alt="Uniform barrier.">
 </div>
 
 
