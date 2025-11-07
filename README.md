@@ -325,12 +325,12 @@ Options:
 
 **Features:**
 - **Radial layout**: Concentric circles represent crossing numbers (3-19)
-- **Class sectors**: 9 sectors for Jm-triviality classes (J2-J10)
+- **Class sectors**: 9 sectors for Jm-triviality classes (J1-J9)
 - **Interactive**: Hover over points for knot details, click sectors to highlight classes
 - **Bezier curves**: Connect knots to their triviality class centers
 - **Statistics panel**: Shows chunk counts, represented knots, crossing ranges
 
-**Output:** Opens `Jm_visualizer.html` in your browser showing the interactive visualization.
+**Output:** Open `Jm_visualizer.html` in your browser for the interactive visualization.
 
 ---
 
