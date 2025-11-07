@@ -452,11 +452,11 @@ Computes Jm-triviality index for a sample knot.
     <img src="assets/last_row.png" width="800" alt="Last-row fingerprint of Jones-m-flat subcubes.">
 </div>
 
+- **Shadow criterion (Lemma B.1).** If (P) holds on all crossings of a shadow, every crossing is nugatory and the shadow is a tree; hence every carried diagram is an unknot. This collapses any supercritical Jones–m–flat face and yields the barrier when $m$ exceeds the number of varied crossings. *(Proof: Part I, Appendix B, pp. 24–26.)*
+
 <div align="center">
     <img src="assets/deg_cap.png" width="800" alt="Degree cap for Jones-m-flat subcubes.">
 </div>
-
-- **Shadow criterion (Lemma B.1).** If (P) holds on all crossings of a shadow, every crossing is nugatory and the shadow is a tree; hence every carried diagram is an unknot. This collapses any supercritical Jones–$m$–flat face and yields the barrier when $m$ exceeds the number of varied crossings. *(Proof: Part I, Appendix B, pp. 24–26.)*
 
 - **Detection corollaries.** If $V_K\equiv1$ then $K$ is the unknot (Thm. 5.3). If *all* finite‑type invariants vanish (GH $m$-trivial for all $m$), then $K$ is the unknot (Thm. 5.4).
   <div align="center">
