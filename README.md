@@ -20,6 +20,11 @@ Part I proves a *uniform barrier* for Jones–Vassiliev truncations and derives 
     <img src="assets/Jm_triviality.png" width="800" alt="Definition of Jm-triviality from Part I.">
   </div>
 
+  <div align="center">
+    <img src="assets/m_barrier.png" width="800" alt="Uniform barrier.">
+    <img src="assets/Udetection.png" width="800" alt="Jones detects the unknot.">
+  </div>
+
 - **Computational evidence (Part II).** Using the **Jones–Vassiliev polynomial (JVP)** in $\mathbb{Z}[p][x]/(x^2-px-1)$, we classify $J_m$-trivial knots by the $p$-adic order of $V_K-1$ and verify the barrier across **352,152,252** prime knots with $N\le 19$. Data obey a stricter empirical cap
   $$m \le \Big\lfloor \tfrac{N(K)}{2}\Big\rfloor + 1,$$
   and reproduce the symbol‑skein recursion and the **last‑row fingerprint**. See Fig. 3 (first occurrences, Part II p. 14) and Fig. 4 (likelihood curves, Part II p. 15).
