@@ -436,6 +436,14 @@ Computes Jm-triviality index for a sample knot.
 
 - **Barrier (Thm. 5.1).** If $K$ is nontrivial and Jones–$m$–trivial then $m\le N(K)$. The proof uses **extended shadows**: decorate each crossing $j$ with a degree–$m_j$ clasper so flipping $j$ is a $C_{m_j}$-move invisible below order $m_j$. A **weighted Goussarov–Habiro filtration** gives an **$m$-flat family** for all order $<m$ layers. *(See the crossing–flip–mod–$C_m$ "movie" in Part I, Fig. 1, p. 13.)*
 
+<div align="center">
+    <img src="assets/Jm_families_mod_cm.png" width="800" alt="Flip modulo C_m.">
+</div>
+
+<div align="center">
+    <img src="assets/K_GH_expansion.png" width="800" alt="Flip modulo C_m.">
+</div>
+
 - **Symbol calculus & last–row fingerprint (Thm. 4.10).** In the Birman–Lin expansion $V_K(e^{h/2})=\sum c_n h^n$, the order–0 term $c_0(L)=(-2)^{\ell(L)-1}$ counts components. A symbol–level skein shows that on any Jones–$m$–flat subcube, smoothing any prescribed $m-1$ crossings forces
   $$c_0=(-2)^{m-1},$$
   i.e. the component count increases by exactly one per smoothing—**property (P)**. *(See the symbol matrix in Part I, Fig. 2, p. 20.)*
