@@ -514,11 +514,7 @@ If you use the theory or the code, please cite both parts:
 
 Contributions are welcome! Areas for improvement:
 
-- Additional data sources and formats
-- Performance optimizations for larger datasets
-- Extended visualizations (3D, alternative layouts)
-- Integration with other knot invariants
-- GPU acceleration for parallel processing
+- Extension to 20+ crossings to find the first $J_{\geq 10}$-trivial knots.
 
 Please open an issue or submit a pull request.
 
@@ -533,8 +529,8 @@ Please open an issue or submit a pull request.
 ## Acknowledgments
 
 We thank the maintainers of:
-- **Knot Atlas** (knotinfo.math.indiana.edu)
-- **Dartmouth Knot Database** (https://math.dartmouth.edu/~mph/)
+- **Knot Atlas** (https://katlas.org/wiki/Main_Page)
+- **Dartmouth Knot Database** (https://knots.dartmouth.edu/jones_polynomial/)
 
 for providing comprehensive Jones polynomial datasets that made this computational study possible.
 
