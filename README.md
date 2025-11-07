@@ -16,6 +16,10 @@ Part I proves a *uniform barrier* for Jones–Vassiliev truncations and derives 
   $$m \le N(K)\quad\text{(crossing number).}$$
   As a corollary, **the Jones polynomial detects the unknot**: if $V_K(t)\equiv 1$, then $K$ is the unknot. On any minimal diagram with $C$ crossings, vanishing $c_1,\dots,c_C$ is a finite certificate of triviality.
 
+  <div align="center">
+    <img src="assets/Jm_triviality.png" width="800" alt="Definition of Jm-triviality from Part I.">
+  </div>
+
 - **Computational evidence (Part II).** Using the **Jones–Vassiliev polynomial (JVP)** in $\mathbb{Z}[p][x]/(x^2-px-1)$, we classify $J_m$-trivial knots by the $p$-adic order of $V_K-1$ and verify the barrier across **352,152,252** prime knots with $N\le 19$. Data obey a stricter empirical cap
   $$m \le \Big\lfloor \tfrac{N(K)}{2}\Big\rfloor + 1,$$
   and reproduce the symbol‑skein recursion and the **last‑row fingerprint**. See Fig. 3 (first occurrences, Part II p. 14) and Fig. 4 (likelihood curves, Part II p. 15).
@@ -57,14 +61,14 @@ Part I proves a *uniform barrier* for Jones–Vassiliev truncations and derives 
 | **BLexpansion.py** | Computes Birman–Lin (Taylor) expansion coefficients from Jones polynomials |
 | **Jm_triviality.py** | Main processing pipeline: splits large JSON files, computes Jm-triviality indices in parallel, generates statistics |
 | **visualize.py** | Creates interactive HTML visualization of knot chunks by crossing number and triviality class |
-| **plot_Jm_cdf.py** | Plots cumulative probability distributions \(P_m(N)\) for Jm-triviality |
+| **plot_Jm_cdf.py** | Plots cumulative probability distributions $P_m(N)$ for Jm-triviality |
 
 ### Data Files
 
 | File | Description |
 |------|-------------|
-| **Jm_probs.json** | Conditional probabilities \(P(m \mid N)\) for each crossing number  (output of `Jm_triviality.py`)|
-| **knot_ids.json** | Knot chunks organized by Jm-triviality index (output of `Jm_triviality.py`) |
+| **Jm_probs.json** | Conditional probabilities $P(m \mid N)$ for each crossing number  (output of `Jm_triviality.py`)|
+| **knot_ids.json** | Knot chunks organized by $J_m$-triviality index (output of `Jm_triviality.py`) |
 | **jones_*.json** | Downloaded Jones polynomial coefficient datasets (from scraper) |
 
 ---
