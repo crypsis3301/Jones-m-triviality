@@ -1,0 +1,43 @@
+# GitHub Pages Configuration
+title: "A Bound on the m-Triviality of Knots"
+description: "Theory and Computational Evidence for Jones-Vassiliev Unknot Detection"
+author: "A. Carmi and E. Cohen"
+email: your.email@example.com
+
+# GitHub repository
+repository: crypsis3301/Jones-m-triviality
+github_username: yourusername
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  math_engine: mathjax
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Include files that start with underscore
+include:
+  - _config.yml
+
+# Plugins (optional, for GitHub Pages)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# SEO settings
+lang: en-US
+url: "https://crypsis3301.github.io"
+baseurl: "/Jones-m-triviality"
+
+
+# Theme settings
+theme_color: "#4ade80"  # Green accent color

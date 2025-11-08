@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Bound on the m-Triviality of Knots - Theory and Computational Evidence">
+    <meta name="keywords" content="knot theory, Jones polynomial, Vassiliev invariants, unknot detection, Jm-triviality">
+    <meta name="author" content="A. Carmi and E. Cohen">
+    
+    <title>A Bound on the m-Triviality of Knots</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔗</text></svg>">
+    
+    <!-- MathJax for LaTeX rendering -->
+    <script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        svg: {
+            fontCache: 'global'
+        }
+    };
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <link rel="stylesheet" href="assets/css/style-dark.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>Knot $J_m$-Triviality Bound</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#abstract">Abstract</a></li>
+                <li><a href="#theory">Theory</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#visualization">Visualization</a></li>
+                <li><a href="#code">Code</a></li>
+                <li><a href="#papers">Papers</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">A Bound on the <em>m</em>-Triviality of Knots</h1>
+                <p class="hero-subtitle">Part I: Jones-Vassiliev Unknot Detection; Part II: Computational evidence</p>
+                <p class="hero-authors">A. Carmi and E. Cohen</p>
+                <div class="hero-buttons">
+                    <a href="#visualization" class="btn btn-primary">Interactive Visualization</a>
+                    <a href="https://github.com/crypsis3301/Jones-m-triviality" class="btn btn-secondary" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Abstract Section -->
+    <section id="abstract" class="section">
+        <div class="container">
+            <h2>Abstract</h2>
+            <div class="abstract-box">
+                <p>
+                    We prove a <strong>uniform barrier</strong> for Jones-Vassiliev truncations: if a nontrivial knot $K$ 
+                    is Jones-$m$-trivial (its Birman-Lin coefficients $c_1,\dots,c_{m-1}$ vanish), then
+                </p>
+                <div class="equation-block">
+                    $$m \le N(K) \quad \text{(crossing number)}$$
+                </div>
+                <p>
+                    As a corollary, <strong>the Jones polynomial detects the unknot</strong>: if $V_K(t) \equiv 1$, 
+                    then $K$ is the unknot.
+                </p>
+                <p>
+                    We verify this barrier computationally across <strong>352,152,252 prime knots</strong> with 
+                    $N \le 19$ crossings using the Jones-Vassiliev polynomial (JVP) in 
+                    $\mathbb{Z}[p][x]/(x^2-px-1)$. The data reveal an empirical refinement:
+                </p>
+                <div class="equation-block">
+                    $$m \le \left\lfloor \frac{N(K)}{2} \right\rfloor + 1$$
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Theory Section -->
+    <section id="theory" class="section section-alt">
+        <div class="container">
+            <h2>Theoretical Results</h2>
+            
+            <div class="theory-grid">
+                <div class="theory-card">
+                    <h3>Uniform Barrier Theorem</h3>
+                    <p>
+                        <strong>Theorem 5.1:</strong> If $K$ is nontrivial and Jones-$m$-trivial, then $m \le N(K)$.
+                    </p>
+                    <p class="detail">
+                        The proof uses <em>extended shadows</em>: decorating each crossing with a degree-$m_j$ clasper 
+                        makes flips invisible below order $m_j$, creating an $m$-flat family for all order $&lt;m$ layers.
+                    </p>
+                </div>
+
+                <div class="theory-card">
+                    <h3>Unknot Detection</h3>
+                    <p>
+                        <strong>Theorem 5.3:</strong> If $V_K \equiv 1$, then $K$ is the unknot.
+                    </p>
+                    <p class="detail">
+                        This resolves a longstanding question: the Jones polynomial detects the unknot.
+                    </p>
+                </div>
+
+                <div class="theory-card">
+                    <h3>Last-Row Fingerprint</h3>
+                    <p>
+                        <strong>Theorem 4.10:</strong> On any Jones-$m$-flat subcube, smoothing any $m-1$ crossings forces 
+                        $c_0 = (-2)^{m-1}$.
+                    </p>
+                    <p class="detail">
+                        The symbol-skein shows component count increases by exactly one per smoothing—property (P).
+                    </p>
+                </div>
+
+                <div class="theory-card">
+                    <h3>Shadow Criterion</h3>
+                    <p>
+                        <strong>Lemma B.1:</strong> If property (P) holds on all crossings, the shadow is a tree.
+                    </p>
+                    <p class="detail">
+                        This collapses supercritical faces and establishes the barrier when $m$ exceeds the 
+                        number of varied crossings.
+                    </p>
+                </div>
+            </div>
+
+            <div class="plot-container mt-lg">
+                <h3>Visual Proof Sketch</h3>
+                <p class="section-intro">
+                    The proof constructs $J_m$-flat families using claspers to make crossing flips invisible 
+                    below order $m$, then applies the shadow criterion to establish the barrier.
+                </p>
+
+                <h4>$J_m$-trivial knots</h4>
+                <img src="assets/images/Jm_triviality.png" alt="Jm-triviality definition." class="responsive-img">
+                <p class="caption">
+                    Jones-m-trivial knots have an initial $m$ gap in their finite-type (Birman-Lin / JVP) expansion of the Jones polynomail. Any knot is at least $J_2$-trivial.
+                    The unknot is $J_m$-trivial for all $m$. Standard $m$-triviality implies $J_m$-triviality.
+                </p>
+                <img src="assets/images/Jm_triviality_knots.png" alt="Some Jm-trivial knots." class="responsive-img">
+                <p class="caption">
+                    Some example of $m$-trivial / $J_m$-trivial knots and their clasper tree representation.
+                </p>
+                
+
+                <h4>$m$-invisible crossings / crossing flip modulo $C_m$</h4>
+                <img src="assets/images/Jm_families_mod_cm.png" alt="Jm-flat families modulo Cm moves" class="responsive-img">
+                <p class="caption">
+                    Extended shadows with claspers make crossing flips $C_m$-moves, invisible to order $&lt;m$ invariants.
+                </p>
+
+                </p>
+                <img src="assets/images/Jm_families_mod_cm_proof.png" alt="Jm-flat families modulo Cm moves" class="responsive-img">
+                <p class="caption">
+                    The proof employs Habiro's move 10 and Proposition 4.5 (crossing change of a clasper tree edge) as well as isotopies. 
+                    The movie preserves degree $< m$ finite-type invariants.
+                </p>
+
+                <h4>$m$-flat shadows/families</h4>
+                <img src="assets/images/Diff.png" alt="Alternating sum definition." class="responsive-img">
+                <p class="caption">
+                    Alternating sums over knots are in the sense of Vassiliev, knots having singular/double points.
+                </p>
+
+                </p>
+                <img src="assets/images/K_GH_expansion.png" alt="GH filtration as a Taylor expansion." class="responsive-img">
+                <p class="caption">
+                    The family of knots carried by the shadow is encoded by a GH-Taylor expansion whose terms are $m$-graded pieces of
+                    the GH filtration (knots having at least $m$ double points). The initial gap imposed by crossing flips modulo $C_m$
+                    leads to the vanishing of order $< m$ symbols (alternating sums over the clasper-decorated crossings). Such a family is
+                    said to be $m$-flat.  
+                </p>
+
+                </p>
+                <img src="assets/images/m_flat.png" alt="m-flat families." class="responsive-img">
+                <p class="caption">
+                    $m$-flat families/shadow/subcube are objects encoding set of knots whose members, which differ by crossing flips, share an initial 
+                    $m$-gap in their finite-type expansions. Order $< m$ symbols (alternating sums) vanish on such objects.   
+                </p>
+
+                <h4>Last-row fingerprint of Jones-m-flat shadows/subcubes</h4>
+                <img src="assets/images/symbolicskein.png" alt="Symbolic skein of the Jones polynomial." class="responsive-img">
+                <p class="caption">
+                    The order-0 coefficient $c_0$ in the finite-type expansion of the Jones polynomial encodes the number of link 
+                    components. This is also the order-0 symbol, an invariant of shadows/subcubes. The Jones symbolic skein relation 
+                    (recursive computation of its weight system) furnishes the computation of $c_0$ using higher order symbols./ 
+                    When these vanish, as is the case for $m$-flat shadows, it enforces a last-row fingerprint: the order-0 symbol
+                    after oriented smoothing of $m-1$ crossings is $c_0 = (-2)^{m-1}$, i.e., $m$ link components.
+                </p>
+
+                <img src="assets/images/last_row.png" alt="Last-row fingerprint." class="responsive-img">
+                <p class="caption">
+                    The last-row fingerprint of Jones-m-flat subcubes.
+                </p>
+
+                <h4>Degree cap and obstruction mechanism</h4>
+                <img src="assets/images/fingerprint.png" alt="The obstruction." class="responsive-img">
+                <p class="caption">
+                    When smoothing $k$ crossing always results in $k+1$ link components for any $k$ up to the number
+                    of crossings then the shadow is a tree and every diagram is an unknot. This is a consequence
+                    of the Shadow lemma. 
+                </p>
+
+                <img src="assets/images/shadow.png" alt="The shadow lemma." class="responsive-img">
+                <p class="caption">
+                    The Shadow lemma.
+                </p>
+
+                <img src="assets/images/deg_cap.png" alt="Degree cap." class="responsive-img">
+                <p class="caption">
+                    The last-row fingerprint of Jones-m-flat subcubes and the Shadow lemma lead to obstruction
+                    to $m$ beyond the subcube dimension (equals to the number of crossings in a minimal diagram of a base knot).
+                    Unless $m < \dim(Q)$ the shadow is a tree and its carried diagrams are unknots.
+                </p>
+
+                <h4>Uniform barrier and unknot detection</h4>
+                <img src="assets/images/m_barrier.png" alt="Uniform barrier." class="responsive-img">
+                <p class="caption">
+                    Proof sketch: Let $S$ be the shadow of a $J_m$-trivial $K$. Make all crossings $m$-invisible by decorating them with claspers. 
+                    Lemma 3.3 ($m$-flat family) the subcube $Q_S$ is Jones-$m$-flat / $m$-flat 
+                    (all order-$< m$ symbols vanish). Theorem 4.10 (Last-row fingerprin/t) and Corollary 4.11 (degree cap) show that if 
+                    $m > |Q_S| = N(K)$ the subcube $Q_S$ becomes completely flat, in which case all knots carried by $S$ are trivial. 
+                    The clasper decorations occupy the higher degrees in the GH filtration and thus may be 
+                    trivialized without affecting this conclusion. Therefore, unless a $K$ is trivial, it cannot be $J_m$-trivial with $m > N(K)$.
+                </p>
+
+                <img src="assets/images/Udetection.png" alt="Detection theorems." class="responsive-img">
+                <p class="caption">
+                    Jones detects the unknot. Similarly, Vassiliev unknot conjecture follows.
+                </p>
+                
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="section">
+        <div class="container">
+            <h2>Computational Results</h2>
+            
+            <div class="results-summary">
+                <div class="stat-box">
+                    <div class="stat-number">352M+</div>
+                    <div class="stat-label">Prime Knots Analyzed</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">19</div>
+                    <div class="stat-label">Maximum Crossings</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Barrier Verified</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">$J_9$</div>
+                    <div class="stat-label">Highest Index Found</div>
+                </div>
+            </div>
+
+            <h3>Key Findings</h3>
+            <div class="findings-grid">
+                <div class="finding">
+                    <h4>Empirical Refinement</h4>
+                    <p>All tested knots satisfy the stronger bound $m \le \lfloor N/2 \rfloor + 1$, 
+                    suggesting the theoretical barrier may not be sharp.</p>
+                </div>
+                
+                <div class="finding">
+                    <h4>First Occurrences</h4>
+                    <ul>
+                        <li><strong>$J_3$-trivial:</strong> First at 8 crossings (8₂)</li>
+                        <li><strong>$J_8$-trivial:</strong> First at 14 crossings (14a_hyp_jones:19509)</li>
+                        <li><strong>$J_9$-trivial:</strong> First at 17 crossings (17a_hyp_jones:1743282)</li>
+                    </ul>
+                </div>
+                
+                <div class="finding">
+                    <h4>Processing Scale</h4>
+                    <p>Analysis of 19-crossing knots (294M+ knots) completed in ~5 hours using 16 cores, 
+                    with ultra-fast JSON splitting and parallel processing.</p>
+                </div>
+                
+                <div class="finding">
+                    <h4>Probability Distribution</h4>
+                    <p>Higher triviality classes become exponentially rarer with increasing crossing number, 
+                    following predictable patterns.</p>
+                </div>
+            </div>
+
+            <div class="plot-container">
+                <h3>Cumulative Probability Distribution</h3>
+                <img src="assets/images/jm_cumulative_probs.png" alt="Cumulative probability distribution P_m(N)" class="responsive-img">
+                <p class="caption">
+                    Figure: Cumulative probabilities $P_m(N)$ for $J_m$-triviality across crossing numbers. 
+                    Each curve represents the probability that a randomly chosen knot with $\le N$ crossings 
+                    is $J_m$-trivial.
+                </p>
+            </div>
+
+            <div class="table-container">
+                <h3>Maximally Trivial Knots by Crossing Number</h3>
+                <table class="results-table">
+                    <thead>
+                        <tr>
+                            <th>Crossings</th>
+                            <th>Max Index</th>
+                            <th>Knot</th>
+                            <th>Total Knots</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>8</td>
+                            <td>$J_4$</td>
+                            <td>8₁₄</td>
+                            <td>21</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>$J_5$</td>
+                            <td>K11a81</td>
+                            <td>552</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>$J_6$</td>
+                            <td>K12a214</td>
+                            <td>2,176</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>$J_8$</td>
+                            <td>14a_hyp_jones:19509</td>
+                            <td>46,972</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>$J_9$</td>
+                            <td>17a_hyp_jones:1743282</td>
+                            <td>8,053,393</td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>$J_9$</td>
+                            <td>19n_hyp_jones:241949734</td>
+                            <td>294,130,458</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visualization Section -->
+    <section id="visualization" class="section section-alt">
+        <div class="container">
+            <h2>Interactive Visualization</h2>
+            <p class="section-intro">
+                Explore the distribution of prime knots by crossing number and $J_m$-triviality class. 
+                Click on class sectors to highlight specific groups.
+            </p>
+            
+            <div class="viz-buttons">
+                <a href="visualization.html" class="btn btn-large btn-primary" target="_blank">
+                    Launch Interactive Visualizer (up to 12 crossings)
+                </a>
+            </div>
+            
+            <div class="viz-preview">
+                <img src="assets/images/0_12_g.jpeg" alt="Visualization preview" class="responsive-img">
+                <p class="caption">
+                    Radial layout showing knot distribution: concentric circles represent crossing numbers (3-19), 
+                    and sectors represent $J_m$-triviality classes ($J_1$-$J_{9}$).
+                </p>
+            </div>
+
+            <div class="viz-buttons">
+                <a href="visualization_1.html" class="btn btn-large btn-primary" target="_blank">
+                    Launch Interactive Visualizer (up to 17 crossings)
+                </a>
+            </div>
+            
+            <div class="viz-preview">
+                <img src="assets/images/0_18_g.jpeg" alt="Visualization preview" class="responsive-img">
+                <p class="caption">
+                    Radial layout showing knot distribution: concentric circles represent crossing numbers (3-19), 
+                    and sectors represent $J_m$-triviality classes ($J_1$-$J_{9}$).
+                </p>
+            </div>
+
+
+            <h3>Features</h3>
+            <div class="features-grid">
+                <div class="feature">
+                    <h4>🎯 Interactive Exploration</h4>
+                    <p>Click class sectors to highlight, hover over points for detailed knot information</p>
+                </div>
+                <div class="feature">
+                    <h4>📊 Real-time Statistics</h4>
+                    <p>View chunk counts, represented knots, and crossing ranges dynamically</p>
+                </div>
+                <div class="feature">
+                    <h4>🌈 Visual Encoding</h4>
+                    <p>Bézier curves connect knots to their triviality class centers</p>
+                </div>
+                <div class="feature">
+                    <h4>📈 Scalable</h4>
+                    <p>Efficiently displays thousands of knot chunks across 17 crossing numbers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Code Section -->
+    <section id="code" class="section">
+        <div class="container">
+            <h2>Code & Reproducibility</h2>
+            
+            <div class="code-intro">
+                <p>
+                    All computational results are fully reproducible. The repository includes complete 
+                    implementations of both the Jones-Vassiliev polynomial (JVP) method and Birman-Lin 
+                    expansion, along with parallel processing pipelines for large-scale analysis.
+                </p>
+            </div>
+
+            <div class="code-grid">
+                <div class="code-card">
+                    <h3>📥 Data Acquisition</h3>
+                    <code>OptimizedJonesScraper1.py</code>
+                    <p>Downloads Jones polynomial coefficients from Knot Atlas and Dartmouth databases</p>
+                </div>
+
+                <div class="code-card">
+                    <h3>🔬 JVP Computation</h3>
+                    <code>JVP.py</code>
+                    <p>Converts Jones polynomials to Jones-Vassiliev form in $\mathbb{Z}[p][x]/(x^2-px-1)$</p>
+                </div>
+
+                <div class="code-card">
+                    <h3>📐 Birman-Lin Expansion</h3>
+                    <code>BLexpansion.py</code>
+                    <p>Computes Taylor expansion coefficients from Jones polynomials</p>
+                </div>
+
+                <div class="code-card">
+                    <h3>⚡ Parallel Processing</h3>
+                    <code>Jm_triviality.py</code>
+                    <p>Main pipeline with ultra-fast JSON splitting and multi-core processing</p>
+                </div>
+
+                <div class="code-card">
+                    <h3>🎨 Visualization</h3>
+                    <code>visualize.py</code>
+                    <p>Generates interactive HTML visualizations of knot distributions</p>
+                </div>
+
+                <div class="code-card">
+                    <h3>📊 Plotting</h3>
+                    <code>plot_Jm_cdf.py</code>
+                    <p>Creates publication-quality cumulative probability plots</p>
+                </div>
+            </div>
+
+            <h3>Quick Start</h3>
+            <div class="code-example">
+                <pre><code># Download Jones polynomial data (13-15 crossings)
+./OptimizedJonesScraper1.py --source dartmouth --crossing 13-15 --out j13_15.json
+
+# Compute Jm-triviality indices (2 parallel workers)
+./Jm_triviality.py j13_15.json 2
+
+# Generate interactive visualization
+./visualize.py knot_ids.json
+
+# Create cumulative probability plot
+./plot_Jm_cdf.py Jm_probs.json --dark --scheme green</code></pre>
+            </div>
+
+            <h3>Requirements</h3>
+            <ul style="color: var(--text-secondary); margin-left: 2rem;">
+                <li>Python ≥ 3.10</li>
+                <li>4+ GB RAM for processing large datasets</li>
+                <li>~87 GB disk space for the entire dataset up to 19 crossings</li>
+            </ul>
+
+            <div class="github-link">
+                <a href="https://github.com/crypsis3301/Jones-m-triviality" class="btn btn-large btn-secondary" target="_blank">
+                    View Full Documentation on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Papers Section -->
+    <section id="papers" class="section section-alt">
+        <div class="container">
+            <h2>Publications</h2>
+            
+            <div class="papers-grid">
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <span class="paper-badge">Part I</span>
+                        <h3>Jones-Vassiliev Unknot Detection</h3>
+                    </div>
+                    <p class="paper-authors">A. Carmi and E. Cohen</p>
+                    <p class="paper-description">
+                        Proves the uniform barrier theorem using extended shadows and weighted Goussarov-Habiro 
+                        filtrations. Establishes that the Jones polynomial detects the unknot and derives the 
+                        last-row fingerprint property.
+                    </p>
+                    <div class="paper-links">
+                        <a href="assets/pdfs/bound_on_m_triviality-part_I.pdf" class="btn btn-small" target="_blank">PDF</a>
+                        <a href="#" class="btn btn-small btn-outline">arXiv</a>
+                        <a href="#" class="btn btn-small btn-outline">BibTeX</a>
+                    </div>
+                </div>
+
+                <div class="paper-card">
+                    <div class="paper-header">
+                        <span class="paper-badge">Part II</span>
+                        <h3>Computational Evidence</h3>
+                    </div>
+                    <p class="paper-authors">A. Carmi and E. Cohen</p>
+                    <p class="paper-description">
+                        Implements finite packaging of Jones-Vassiliev polynomial, runs census up to 19 crossings 
+                        covering 352+ million knots. Reports empirical refinement of the barrier and probability 
+                        distributions.
+                    </p>
+                    <div class="paper-links">
+                        <a href="assets/pdfs/bound_on_m_triviality-part_II.pdf" class="btn btn-small" target="_blank">PDF</a>
+                        <a href="#" class="btn btn-small btn-outline">arXiv</a>
+                        <a href="#" class="btn btn-small btn-outline">BibTeX</a>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Citation</h3>
+            <div class="citation-box">
+                <pre><code>@article{carmi2025bound1,
+  title={A bound on the m-triviality of knots -- Part I: Jones-Vassiliev unknot detection},
+  author={Carmi, A. and Cohen, E.},
+  year={2025}
+}
+
+@article{carmi2025bound2,
+  title={A bound on the m-triviality of knots -- Part II: Computational evidence},
+  author={Carmi, A. and Cohen, E.},
+  year={2025}
+}</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Project</h4>
+                    <ul>
+                        <li><a href="https://github.com/crypsis3301/Jones-m-triviality">GitHub Repository</a></li>
+                        <li><a href="https://github.com/crypsis3301/Jones-m-triviality/issues">Report Issue</a></li>
+                        <li><a href="#papers">Publications</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://katlas.org/wiki/Main_Page" target="_blank">Knot Atlas</a></li>
+                        <li><a href="https://knots.dartmouth.edu/jones_polynomial/" target="_blank">Dartmouth Knot Database</a></li>
+                        <li><a href="https://github.com/crypsis3301/Jones-m-triviality/blob/main/README.md">Documentation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>A. Carmi<br>E. Cohen</p>
+                    <p><a href="mailto:your.email@example.com">your.email@example.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 A. Carmi and E. Cohen. All rights reserved.</p>
+                <p>Built with Mathematics 🔗</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Smooth Scrolling Script -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
