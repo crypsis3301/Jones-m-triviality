@@ -324,9 +324,10 @@ Options:
 ```
 
 **Features:**
-- **Radial layout**: Concentric circles represent crossing numbers (3-19)
+- **Radial layout**: Concentric circles represent crossing numbers (3-19).
+- **Clockwise order**: Knot chunks are indexed clockwise around any circle (e.g., $8_1$, $8_2$, $8_3$).  
 - **Class sectors**: 9 sectors for Jm-triviality classes (J1-J9)
-- **Interactive**: Hover over points for knot details, click sectors to highlight classes
+- **Interactive**: Hover over points for knot details, and over sectors to highlight classes
 - **Bezier curves**: Connect knots to their triviality class centers
 - **Statistics panel**: Shows chunk counts, represented knots, crossing ranges
 
