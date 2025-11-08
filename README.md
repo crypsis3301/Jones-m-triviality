@@ -443,7 +443,11 @@ Computes Jm-triviality index for a sample knot.
 </div>
 
 <div align="center">
-    <img src="assets/K_GH_expansion.png" width="800" alt="Flip modulo C_m.">
+    <img src="assets/Diff.png" width="800" alt="Difference operator.">
+</div>
+
+<div align="center">
+    <img src="assets/K_GH_expansion.png" width="800" alt="GH-Taylor expansion.">
 </div>
 
 - **Symbol calculus & last–row fingerprint (Thm. 4.10).** In the Birman–Lin expansion $V_K(e^{h/2})=\sum c_n h^n$, the order–0 term $c_0(L)=(-2)^{\ell(L)-1}$ counts components. A symbol–level skein shows that on any Jones–$m$–flat subcube, smoothing any prescribed $m-1$ crossings forces
